@@ -1,0 +1,170 @@
+/* CSS Custom Properties */
+:root {
+  --clr-dark: #22201b;
+  --clr-light: #e4e2dd;
+  --clr-slate400: #bcb9b4;
+  --clr-slate600: #7d7a75;
+  --clr-slate800: #3f3d3a;
+  --clr-green-dark: #4d6837;
+  --clr-green-light: #adc897;
+
+  --clr-red-300: oklch(80.8% 0.114 19.571);
+  --clr-red-500: oklch(63.7% 0.237 25.331);
+  --clr-red-600: oklch(57.7% 0.245 27.325);
+  --clr-yellow-400: oklch(85.2% 0.199 91.936);
+  --clr-green-100: oklch(96.2% 0.044 156.743);
+  --clr-green-300: oklch(87.1% 0.15 154.449);
+  --clr-green-400: oklch(79.2% 0.209 151.711);
+  --clr-green-500: oklch(72.3% 0.219 149.579);
+  --clr-green-600: oklch(62.7% 0.194 149.214);
+  --clr-green-900: oklch(39.3% 0.095 152.535);
+  --clr-blue-100: oklch(93.2% 0.032 255.585);
+  --clr-blue-300: oklch(80.9% 0.105 251.813);
+  --clr-blue-400: oklch(70.7% 0.165 254.624);
+  --clr-blue-500: oklch(62.3% 0.214 259.815);
+  --clr-blue-600: oklch(54.6% 0.245 262.881);
+  --clr-blue-900: oklch(37.9% 0.146 265.522);
+  --clr-purple-100: oklch(94.6% 0.033 307.174);
+  --clr-purple-400: oklch(71.4% 0.203 305.504);
+  --clr-purple-600: oklch(55.8% 0.288 302.321);
+  --clr-purple-900: oklch(38.1% 0.176 304.987);
+  --clr-gray-50: oklch(98.5% 0.002 247.839);
+  --clr-gray-100: oklch(96.7% 0.003 264.542);
+  --clr-gray-200: oklch(92.8% 0.006 264.531);
+  --clr-gray-300: oklch(87.2% 0.01 258.338);
+  --clr-gray-400: oklch(70.7% 0.022 261.325);
+  --clr-gray-500: oklch(55.1% 0.027 264.364);
+  --clr-gray-600: oklch(44.6% 0.03 256.802);
+  --clr-gray-700: oklch(37.3% 0.034 259.733);
+  --clr-gray-800: oklch(27.8% 0.033 256.848);
+  --clr-gray-900: oklch(21% 0.034 264.665);
+  --clr-white: #fff;
+
+  /* Sizes (using a 1.25 modular scale) */
+  --size-xxs: 0.5rem; /* 8px */
+  --size-xs: 0.625rem; /* 10px */
+  --size-sm: 0.75rem; /* 12px */
+  --size-md: 1rem; /* 16px */
+  --size-lg: 1.25rem; /* 20px */
+  --size-xl: 1.5rem; /* 24px */
+  --size-2xl: 1.875rem; /* 30px */
+  --size-3xl: 2.25rem; /* 36px */
+  --size-4xl: 3rem; /* 48px */
+  --size-5xl: 3.75rem; /* 60px */
+  --size-6xl: 4.5rem; /* 72px */
+  --size-7xl: 6rem; /* 96px */
+  --size-8xl: 7.5rem; /* 120px */
+  --size-9xl: 9rem; /* 144px */
+  --size-10xl: 12rem; /* 192px */
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  font-size: var(--size-md);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+a {
+  color: var(--clr-green-light);
+}
+
+strong {
+  color: var(--clr-green-dark);
+}
+
+/* Layout Components */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.section {
+  margin-top: 5rem;
+}
+
+/* Responsive Breakpoints */
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  /* Responsive typography */
+  :root {
+    --size-md: 1.125rem; /* 18px on larger screens */
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  .section {
+    margin-top: 10rem;
+  }
+}
+
+/* xl */
+@media (min-width: 1080px) {
+  .container {
+    max-width: 1080px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
