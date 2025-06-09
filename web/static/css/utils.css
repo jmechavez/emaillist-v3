@@ -1,0 +1,32 @@
+/* Improved Breakpoints - Better device coverage */
+/* xs */
+/* @media (min-width: 375px) {} */ /* Large phones */
+
+/* sm */
+/* @media (min-width: 640px) {} */ /* Small tablets */
+
+/* md */
+/* @media (min-width: 768px) {} */ /* Tablets */
+
+/* lg */
+/* @media (min-width: 1024px) {} */ /* Laptops */
+
+/* xl */
+/* @media (min-width: 1280px) {} */ /* Desktops */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */ /* Large desktops */
+
+/* Container System - Improved fluid design */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--size-md);
+  padding-right: var(--size-md);
+}
+
+.section {
+  margin-top: var(--size-6xl);
+  margin-bottom: var(--size-4xl);
+}

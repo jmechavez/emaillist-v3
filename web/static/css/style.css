@@ -71,8 +71,8 @@ html {
 body {
   font-family: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  background-color: var(--clr-dark);
-  color: var(--clr-light);
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
   font-size: var(--size-md);
 }
 

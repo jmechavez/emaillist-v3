@@ -10,26 +10,43 @@ templ Home() {
 			// <link rel="stylesheet" href="/static/css/main.css"/>
 			<link rel="stylesheet" href="/static/css/modern-normalize.css"/>
 			<link rel="stylesheet" href="/static/css/style.css"/>
+			<script src="/static/js/main.js"></script>
 			<script src="/static/js/alpine.min.js"></script>
 		</head>
-		<body>
-			<section>
-				<form>
-					<img/>
-					<h1>Sign in</h1>
-					<h6>Use yout Email account.</h6>
+		<body x-init="loadStylesheets()">
+			<section class="container section login">
+				<form class="login__form" id="loginForm">
+					<img alt="jmemail" title="jmemail"/>
+					<h1 class="login__h1">Sign in</h1>
+					<h6 class="login__h6">to continue to jmemail</h6>
 					<div>
 						<input
-							type="text"
+							type="email"
 							id="emailid"
 							name="emailid"
 							required
 							class="email__input"
-							placeholder="emailID"
+							placeholder="Email, phone, or Skype"
+							autocomplete="username"
 						/>
+						<div class="error__message" id="emailError">
+							Enter a valid email address.
+						</div>
 					</div>
 					<div class="form__group form__submit">
-						<button type="Next" class="next__button">Next</button>
+						<button type="submit" class="next__button" id="nextButton">Next</button>
+					</div>
+					<div class="form__options">
+						<label class="form__checkbox">
+							<input type="checkbox" id="staySignedIn"/>
+							<span>Keep me signed in</span>
+						</label>
+					</div>
+					<div class="form__options" style="justify-content: flex-start; margin-top: 16px;">
+						<a href="#" class="form__link">Can't access your account?</a>
+					</div>
+					<div class="form__options" style="justify-content: flex-start; margin-top: 8px;">
+						<a href="#" class="form__link">Sign-in options</a>
 					</div>
 				</form>
 			</section>
