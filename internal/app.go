@@ -19,6 +19,10 @@ func Start() {
 		pages.Home().Render(r.Context(), w)
 	})
 
+	r.HandleFunc("/dashboard", func(w http.ResponseWriter, r *http.Request) {
+		pages.Dashboard().Render(r.Context(), w)
+	})
+
 	log.Println("Server running at http://localhost:8082")
 	log.Fatal(http.ListenAndServe(":8082", r))
 }

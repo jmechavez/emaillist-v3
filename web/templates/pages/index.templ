@@ -15,7 +15,7 @@ templ Home() {
 		</head>
 		<body x-init="loadStylesheets()">
 			<section class="container section login">
-				<form class="login__form" id="loginForm">
+				<form class="login__form" id="loginForm" novalidate>
 					<img alt="jmemail" title="jmemail"/>
 					<h1 class="login__h1">Sign in</h1>
 					<div class="error__message" id="emailError">
@@ -26,7 +26,6 @@ templ Home() {
 							type="email"
 							id="emailid"
 							name="emailid"
-							required
 							class="email__input"
 							placeholder="Email, phone, or Skype"
 							autocomplete="username"

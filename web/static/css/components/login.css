@@ -134,46 +134,47 @@
 
 /* Additional Options */
 .form__options {
-  margin-top: 24px;
+  margin-top: var(--size-xl);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
+  font-size: var(--size-sm);
 }
 
 .form__checkbox {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #323130;
+  gap: var(--size-xxs);
+  color: var(--clr-dark);
 }
 
 .form__checkbox input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  border: 1px solid #605e5c;
-  border-radius: 2px;
-  background: #ffffff;
+  width: var(--size-md);
+  height: var(--size-md);
+  border: 1px solid var(--clr-slate600);
+  border-radius: var(--size-xxs);
+  background: var(--clr-white);
 }
 
 .form__link {
-  color: #0078d4;
+  color: var(--clr-blue-500);
   text-decoration: none;
-  font-size: 13px;
+  font-size: var(--size-sm);
 }
 
 .form__link:hover {
   text-decoration: underline;
+  color: var(--clr-blue-600);
 }
 
 /* Error Messages */
 .error__message {
-  color: #d13438;
-  font-size: 13px;
-  margin-top: 8px;
-  margin-bottom: 16px;
+  color: var(--clr-red-600);
+  font-size: var(--size-sm);
+  margin-top: var(--size-xxs);
+  margin-bottom: var(--size-md);
   display: none;
-  line-height: 16px;
+  line-height: calc(1em + 0.5rem);
 }
 
 .error__message.show {
