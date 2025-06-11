@@ -2,8 +2,8 @@
 window.loadStylesheets = function () {
     const stylesheets = [
       "/static/css/style.css",
-      "/static/css/components/login.css"
-      ,
+      "/static/css/components/login.css",
+      "/static/css/components/header.css",
     ];
     stylesheets.forEach((url) => {
       if (!document.querySelector(`link[href="${url}"]`)) {

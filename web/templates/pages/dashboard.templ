@@ -1,24 +1,33 @@
 package pages
 
 templ Dashboard() {
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8"/>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-            <title>Dashboard</title>
-            <link rel="stylesheet" href="/static/css/modern-normalize.css"/>
-            <link rel="stylesheet" href="/static/css/style.css"/>
-            <script src="/static/js/main.js"></script>
-            <script src="/static/js/alpine.min.js"></script>
-        </head>
-        <body x-init="loadStylesheets()">
-            <section class="container section dashboard">
-                <h1>Welcome to the Dashboard</h1>
-                <p>This is your dashboard where you can manage your account.</p>
-                <!-- Add more dashboard content here -->
-            </section>
-        </body>
-    </html>
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>Dashboard</title>
+			<link rel="stylesheet" href="/static/css/modern-normalize.css"/>
+			<link rel="stylesheet" href="/static/css/style.css"/>
+			<script src="/static/js/main.js"></script>
+			<script src="/static/js/alpine.min.js"></script>
+		</head>
+		<body x-init="loadStylesheets()">
+			<header class="container header">
+				<nav>
+					<ul class="header__menu">
+						<li><a class="header__list" href="/dashboard">Dashboard</a></li>
+						<li><a class="header__list" href="/profile">Profile</a></li>
+						<li><a class="header__list" href="/settings">Settings</a></li>
+						<li><a class="header__list" href="/logout">Logout</a></li>
+					</ul>
+				</nav>
+			</header>
+			<section class="container section dashboard">
+				<h1>Welcome to the Dashboard</h1>
+				<p>This is your dashboard where you can manage your account.</p>
+				<!-- Add more dashboard content here -->
+			</section>
+		</body>
+	</html>
 }
-
