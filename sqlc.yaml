@@ -1,12 +1,9 @@
 version: "2"
-cloud:
-    organization: ""
-    project: ""
-    hostname: ""
-servers: []
-sql: []
-overrides:
-    go: null
-plugins: []
-rules: []
-options: {}
+sql:
+  - engine: "postgresql"
+    queries: "./internal/adapters/secondary/persistence/postgres/queries.sql"
+    schema: "./internal/adapters/secondary/persistence/postgres/schema.sql"
+    gen:
+      go:
+        package: "postgres"
+        out: "internal/adapters/secondary/persistence/postgres"
