@@ -1,0 +1,19 @@
+
+services:
+  postgres:
+    image: postgres:17.5  # Latest PostgreSQL version as of June 2025
+    container_name: postgres-email-service
+    restart: always
+    environment:
+      POSTGRES_USER: emailuser           # Database username
+      POSTGRES_PASSWORD: EmailPass123    # Database password
+      POSTGRES_DB: email_service         # Default database to create
+    ports:
+      - "5433:5432"                      # Expose PostgreSQL port
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+volumes:
+  postgres_data:
+    driver: local
