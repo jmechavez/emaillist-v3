@@ -3,7 +3,7 @@
 BINARY_NAME=app
 BUILD_DIR=bin
 
-.PHONY: build run test clean fmt
+.PHONY: build run test clean fmt docker-up docker-down sqlc
 
 # Build the application
 build:
@@ -33,3 +33,15 @@ deps:
 # Generate templ files
 templ:
 	templ generate
+
+# Generate sqlc files
+sqlc:
+	sqlc generate
+
+# Start docker services
+docker-up:
+	docker-compose up -d
+
+# Stop docker services
+docker-down:
+	docker-compose down

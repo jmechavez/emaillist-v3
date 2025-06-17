@@ -7,4 +7,3 @@ sql:
       go:
         package: "postgres"
         out: "internal/adapters/secondary/persistence/postgres"
-
